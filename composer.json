@@ -1,0 +1,15 @@
+{
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mosyq\\Test\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mosyq\\Test\\": "tests"
+    }
+  }
+}
