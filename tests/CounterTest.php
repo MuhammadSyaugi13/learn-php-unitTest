@@ -2,6 +2,7 @@
 
 namespace Mosyq\Test;
 
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 class CounterTest extends TestCase 
@@ -11,6 +12,10 @@ class CounterTest extends TestCase
     {
         $counter = new Counter;
         $counter->increment();
-        echo "ini : " . $counter->getCounter() . PHP_EOL;
+        $counter->increment();
+        $counter->increment();
+        $counter->increment();
+        $this->assertEquals(4, $counter->getCounter());
+        // echo "ini : " . $counter->getCounter() . PHP_EOL;
     }
 }
